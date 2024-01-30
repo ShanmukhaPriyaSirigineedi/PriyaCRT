@@ -1,0 +1,93 @@
+Delete an element in linked list 1
+
+Write a program to delete an element at the beginning of the linked list. Get the value continuously from the user until the user enters a negative value.
+
+Input Format
+
+The input should be numbers (until user enters a negative value)
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+The output should be numbers in the list in separate line.
+
+Sample Input 0
+
+1
+2
+3
+4
+-1
+Sample Output 0
+
+2
+3
+4
+Sample Input 1
+
+5
+50
+6
+60
+-1
+Sample Output 1
+
+50
+6
+60
+Sample Input 2
+
+10
+20
+30
+40
+50
+60
+-1
+Sample Output 2
+
+20
+30
+40
+50
+60
+
+Code:
+
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class LinkedList:
+    def __init__(self):
+        self.head=self.tail=None
+    def create(self,data):
+        newNode=Node(data)
+        if self.head==None:
+            self.head=self.tail=newNode         
+        else:
+            self.tail.next=newNode
+            self.tail=newNode
+    def DeleteAtBeginning(self):
+        if self.head==None:
+            print("List is Empty")
+            return
+        else:
+            self.head=self.head.next
+    def Display(self):
+        temp=self.head
+        while temp!=None:
+            print(temp.data)
+            temp=temp.next
+l1=LinkedList()
+while True:
+    a=int(input())
+    if a==-1:
+        break
+    else:
+        l1.create(a)
+l1.DeleteAtBeginning()
+l1.Display()
