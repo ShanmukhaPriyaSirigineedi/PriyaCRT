@@ -1,0 +1,94 @@
+Linked list - Searching an element
+
+Write a Program to search an element from the list.
+
+Input Format
+
+Read elements upto -1
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+print output
+
+Sample Input 0
+
+1
+2
+3
+4
+-1
+3
+Sample Output 0
+
+3 is present in the list
+Sample Input 1
+
+1
+2
+3
+4
+5
+-1
+4
+Sample Output 1
+
+4 is present in the list
+Sample Input 2
+
+23
+11
+44
+53
+3
+56
+-1
+88
+Sample Output 2
+
+88 not present in the list
+
+ 
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class LinkedList:
+    def __init__(self):
+        self.head=self.tail=None
+    def create(self,data):
+        newNode=Node(data)
+        if self.head==None:
+            self.head=self.tail=newNode
+        else:
+            self.tail.next=newNode
+            self.tail=newNode
+    def Search(self,target):
+        if self.head==None:
+            print("List is Empty")
+            return
+        else:
+            temp=self.head
+            while temp!=None:
+                if temp.data==target:
+                    return True
+                temp=temp.next
+            return False
+                    
+l1=LinkedList()
+while True:
+    a=int(input())
+    if a==-1:
+        break
+    else:
+        l1.create(a)
+target=int(input())
+if l1.Search(target):
+    print(target,"is present in the list")
+else:
+    print(target,"not present in the list")
+
+    
