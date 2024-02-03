@@ -1,0 +1,134 @@
+Adjacency matrix representation of directed and weighted graph :
+
+Code :
+
+def addNode(v):
+    global n
+    if v in nodes:
+        print(v,"is already existed")
+    else:
+        nodes.append(v)
+        n=n+1
+    for x in graph:
+        x.append(0) 
+    temp=[]
+    for i in range(n):
+        temp.append(0)
+    graph.append(temp)
+def show():
+    for i in range(n):
+        for j in range(n):
+            print(graph[i][j], end=" ")
+        print()
+def addEdge(node1, node2, weight): 
+    if node1 not in nodes:
+        print(node1,"not available in graph")
+    elif node2 not in nodes:
+        print(node2,"not available in graph")
+    else:
+        i = nodes.index(node1)
+        j = nodes.index(node2)
+        graph[i][j] = weight
+nodes = []
+graph = []
+n = 0
+while True:
+    print()
+    print("1.Add Node\n2.Add Edge\n3.Print Graph\n4.Exit")
+    ch = int(input("Enter your choice:"))
+    if ch == 1:
+        v = input("Enter node:")
+        addNode(v)
+    elif ch == 2:
+        node1 = input("Enter node1:")
+        node2 = input("Enter node2:")
+        weight = int(input("Enter weight:")) 
+        addEdge(node1, node2, weight)
+    elif ch == 3:
+        show()
+    elif ch == 4:
+        break
+    else:
+        print("Invalid Choice")
+
+Output :
+
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:1
+Enter node:a
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:1
+Enter node:b
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:1
+Enter node:c
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:1
+Enter node:d
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:2
+Enter node1:a
+Enter node2:b
+Enter weight:3
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:2
+Enter node1:b
+Enter node2:c
+Enter weight:4
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:2
+Enter node1:c
+Enter node2:d
+Enter weight:5
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:2
+Enter node1:d
+Enter node2:a
+Enter weight:6
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:2
+Enter node1:a
+Enter node2:c
+Enter weight:7
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:3
+0 3 7 0 
+0 0 4 0 
+0 0 0 5 
+6 0 0 0 
+
+1.Add Node
+2.Add Edge
+3.Print Graph
+4.Exit
+Enter your choice:4
