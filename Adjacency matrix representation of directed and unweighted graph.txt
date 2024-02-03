@@ -29,7 +29,6 @@ def addEdge(node1, node2):
         i = nodes.index(node1)
         j = nodes.index(node2)
         graph[i][j]=1
-        graph[j][i]=1
 nodes = []
 graph = []
 n = 0
@@ -110,10 +109,10 @@ Enter node2:a
 3.Print Graph
 4.Exit
 Enter your choice:3
-0 1 0 1 
-1 0 1 0 
-0 1 0 1 
-1 0 1 0 
+0 1 0 0 
+0 0 1 0 
+0 0 0 1 
+1 0 0 0 
 
 1.Add Node
 2.Add Edge
