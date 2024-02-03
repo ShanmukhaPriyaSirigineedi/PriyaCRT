@@ -1,0 +1,117 @@
+Adjacency List Representation of Directed and Weighted graph 
+
+Code :
+
+def addNode(v):
+    if v not in k:
+        k.append(v)
+        matrix[v]=[]
+    else:
+        print("That node is already available...")
+def addEdge(node1,node2,weight):
+    if node1 in k:
+        if node2 in k:
+            l1=[]
+            l1.append(node2)
+            l1.append(weight)
+            matrix[node1].append(l1)
+        else:
+            print(node2,"is not available")
+    else:
+        print(node1,"is not available")
+def show():
+    print(matrix)
+matrix={}
+k=[]
+while True:
+    print()
+    print("1.Add node\n2.Add edge\n3.Print graph\n4.Exit")
+    ch=int(input("Enter choice"))
+    if ch==1:
+        v=input("Enter node")
+        addNode(v)
+    elif ch==2:
+        node1=input("Enter node1")
+        node2=input("Enter node2")
+        weight=int(input("Enter weight"))
+        addEdge(node1,node2,weight)
+    elif ch==3:
+        show()
+    elif ch==4:
+        break
+    else:
+        print("Invalid choice")
+
+Output :
+
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice1
+Enter node a
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice1
+Enter node b
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice1
+Enter node c
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice1
+Enter node d
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice2
+Enter node1a
+Enter node2b
+Enter weight3
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice2
+Enter node1b
+Enter node2c
+Enter weight4
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice2
+Enter node1c
+Enter node2d
+Enter weight5
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice2
+Enter node1d
+Enter node2a
+Enter weight6
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice3
+{'a': [['b', 3]], 
+'b': [['c', 4]], 
+'c': [['d', 5]], 
+'d': [['a', 6]]}
+
+1.Add node
+2.Add edge
+3.Print graph
+4.Exit
+Enter choice4
