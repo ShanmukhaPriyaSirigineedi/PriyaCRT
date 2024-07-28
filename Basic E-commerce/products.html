@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce: Products</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Aɖöŕŋÿ🌸</h1>
+                <ul>
+                    <li><a href=dashboard.html>Dashboard</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button id="cartButton">
+                        <img src="https://media.istockphoto.com/id/1359181702/vector/shopping-cart-vector-icon-trolley-flat-design-illustration-business-concept-symbol-in-eps-10.jpg?s=612x612&w=0&k=20&c=k7cWYt8Zqay8YX3f8Vt4q1tQAWdx4OmYp1NVwnzmj5s=" alt="Cart" class="nav-icon">
+                        <span id="cartCount">0</span>
+                    </button>
+                    <button id="wishlistButton">
+                        <img src="https://t3.ftcdn.net/jpg/01/39/21/22/360_F_139212264_XdTJUlAR6wEzS431samnVwVEmC1hspKG.jpg" alt="Wishlist" class="nav-icon">
+                        <span id="wishlistCount">0</span>
+                    </button>
+                    <button id="userIcon">
+                        <img src="https://cdn.create.vista.com/api/media/small/163045232/stock-vector-user-web-icon" alt="User" class="nav-icon">
+                    </button>
+                </div>      
+            </div>
+        </nav>
+    </header>
+    <main>
+    <div class="dashboard-container">
+        <h2 id="welcomeMessage">Welcome, User</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/71LBuGFe4qL._AC_UF1000,1000_QL80_.jpg" alt="Moisturizer">
+                    <h4>Moisturizer</h4>
+                    <p>₹499.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://lafrenchperfumes.com/cdn/shop/files/MoodSwing1.jpg?v=1691560785" alt="Perfume">
+                    <h4>Perfume</h4>
+                    <p>₹399.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://images.meesho.com/images/products/262242747/nwpvp_512.webp" alt="Lipstick">
+                    <h4>Lipstick</h4>
+                    <p>₹449.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://keautybeauty.in/wp-content/uploads/2022/05/concealer-palette-1.webp" alt="Concealer">
+                    <h4>Concealer</h4>
+                    <p>₹299.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://images-static.nykaa.com/media/catalog/product/e/9/e91d6d7NYLAGRL000175_1.jpg" alt="Foundation">
+                    <h4>Foundation</h4>
+                    <p>₹499.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://m.media-amazon.com/images/I/61r68qy1Q3L.jpg" alt="Compact">
+                    <h4>Compact</h4>
+                    <p>₹599.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://media.superdrug.com//medias/sys_master/prd-images/h43/h59/9462091022366/prd-ls5-823052_600x600/prd-ls5-823052-600x600.jpg" alt="Eye Shadow Palette">
+                    <h4>Eye Shadow Palette</h4>
+                    <p>₹449.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="https://www.drsheths.com/cdn/shop/files/CVC-Sunscreen_b88c6206-2887-4910-9a52-6e843356902e_600x.jpg?v=1693494015" alt="Sunscreen">
+                    <h4>Sunscreen</h4>
+                    <p>₹599.0</p>
+                    <button class="buyBtn">Buy</button>
+                    <button class="addToCartBtn">Add to Cart</button>
+                    <button class="addToWishlistBtn">Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- User popup -->
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <p>Are you sure you want to logout?</p>
+            <button id="logoutBtn">Logout</button>
+            <button id="closePopup">Cancel</button>
+        </div>
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>
